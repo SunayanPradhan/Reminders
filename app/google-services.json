@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "322814642908",
+    "project_id": "reminders-2d020",
+    "storage_bucket": "reminders-2d020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322814642908:android:1a220511580ba8ff178219",
+        "android_client_info": {
+          "package_name": "com.sunayanpradhan.reminders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322814642908-qn5ethpp21l0pe8pkm7kor1q22jdjf1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuGkiiST99FiwYxheGlr_VvLKGuHVuNjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322814642908-qn5ethpp21l0pe8pkm7kor1q22jdjf1i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activities.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/header_bg"
+                    android:layout_marginBottom="@dimen/margin_35dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_75dp"
+                        android:layout_height="@dimen/margin_75dp"
+                        android:src="@drawable/reminders_logo_round">
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:layout_marginStart="@dimen/margin_50dp"
+                    android:layout_marginEnd="@dimen/margin_50dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:padding="@dimen/margin_10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_round_mail_24">
+
+
+                    </ImageView>
+
+                    <EditText
+                        android:id="@+id/sign_in_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:inputType="textEmailAddress"
+                        android:textCursorDrawable="@color/teal_200"
+                        android:layout_marginStart="@dimen/margin_4dp"
+                        android:maxLines="1"
+                        android:textSize="@dimen/margin_14dp"
+                        android:hint="Email"
+                        android:padding="@dimen/margin_3dp">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:layout_marginStart="@dimen/margin_50dp"
+                    android:layout_marginEnd="@dimen/margin_50dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:padding="@dimen/margin_10dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_round_lock_24">
+
+
+                    </ImageView>
+
+                    <EditText
+                        android:id="@+id/sign_in_password"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPassword"
+                        android:textCursorDrawable="@color/teal_200"
+                        android:layout_marginStart="@dimen/margin_4dp"
+                        android:maxLines="1"
+                        android:textSize="@dimen/margin_14dp"
+                        android:hint="Password"
+                        android:padding="@dimen/margin_3dp">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+                <android.widget.Button
+                    android:id="@+id/sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg"
+                    android:layout_marginStart="@dimen/margin_50dp"
+                    android:layout_marginEnd="@dimen/margin_50dp"
+                    android:layout_marginTop="@dimen/margin_15dp"
+                    android:layout_marginBottom="@dimen/margin_15dp"
+                    android:padding="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:text="SIGN IN"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_15dp">
+
+                </android.widget.Button>
+
+                <TextView
+                    android:id="@+id/go_to_forgot_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_50dp"
+                    android:layout_marginEnd="@dimen/margin_50dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:gravity="center"
+                    android:text="FORGOT PASSWORD ?"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/margin_15dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OR"
+                    android:gravity="center"
+                    android:textColor="@color/blue">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_35dp"
+                        android:layout_height="@dimen/margin_35dp"
+                        android:src="@drawable/google_logo"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="@dimen/margin_15dp">
+
+                    </ImageView>
+
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_35dp"
+                        android:layout_height="@dimen/margin_35dp"
+                        android:src="@drawable/facebook_logo"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="@dimen/margin_15dp">
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/go_to_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DON'T HAVE ACCOUNT"
+                    android:gravity="center"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="@dimen/margin_20dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/blue"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </ProgressBar>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

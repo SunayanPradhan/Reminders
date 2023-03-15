@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_10dp">
+
+                <TextView
+                    android:id="@+id/reminder_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textSize="@dimen/margin_15dp"
+                    android:textColor="@color/blue"
+                    android:layout_gravity="start|center_vertical"
+                    android:fontFamily="@font/lato_regular">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Reminder"
+                    android:textSize="@dimen/margin_18dp"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/reminder_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add"
+                    android:textSize="@dimen/margin_15dp"
+                    android:textColor="@color/light_blue"
+                    android:layout_gravity="end|center_vertical"
+                    android:fontFamily="@font/lato_bold"
+                    android:enabled="false">
+
+                </TextView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/margin_10dp"
+                android:layout_margin="@dimen/margin_25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/reminder_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="none"
+                        android:textSize="@dimen/margin_18dp"
+                        android:importantForAutofill="no"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="Title">
+
+                    </EditText>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?attr/background"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:layout_marginBottom="@dimen/margin_5dp" />
+
+                    <EditText
+                        android:id="@+id/reminder_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Notes"
+                        android:gravity="start|top"
+                        android:textSize="@dimen/margin_15dp"
+                        android:minHeight="@dimen/margin_100dp">
+
+                    </EditText>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/margin_10dp"
+                android:layout_margin="@dimen/margin_25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/reminder_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/margin_2dp"
+                        android:layout_marginBottom="@dimen/margin_2dp"
+                        android:gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="@dimen/margin_10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Details"
+                            android:textSize="@dimen/margin_20dp"
+                            android:textColor="?attr/colorOnSecondary">
+
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/reminder_details_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/round_keyboard_arrow_down_24">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reminder_details_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/reminder_date_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_5dp"
+                                app:cardBackgroundColor="@color/pink">
+
+                                <ImageView
+                                    android:layout_width="@dimen/margin_25dp"
+                                    android:layout_height="@dimen/margin_25dp"
+                                    android:src="@drawable/calendar_icon"
+                                    android:layout_margin="@dimen/margin_5dp">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_5dp"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date"
+                                    android:textColor="?attr/colorOnSecondary"
+                                    android:textSize="@dimen/margin_18dp">
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/reminder_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/margin_10dp"
+                                    android:visibility="gone">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/reminder_date_checked"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </androidx.appcompat.widget.SwitchCompat>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?attr/background"
+                            android:layout_marginTop="@dimen/margin_5dp"
+                            android:layout_marginBottom="@dimen/margin_5dp">
+
+                        </View>
+
+                        <LinearLayout
+                            android:id="@+id/reminder_time_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="@dimen/margin_5dp"
+                                app:cardBackgroundColor="@color/blue">
+
+                                <ImageView
+                                    android:layout_width="@dimen/margin_25dp"
+                                    android:layout_height="@dimen/margin_25dp"
+                                    android:src="@drawable/clock_logo"
+                                    android:layout_margin="@dimen/margin_5dp">
+
+                                </ImageView>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="@dimen/margin_5dp"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Time"
+                                    android:textColor="?attr/colorOnSecondary"
+                                    android:textSize="@dimen/margin_18dp">
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/reminder_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/margin_10dp"
+                                    android:visibility="gone">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/reminder_time_checked"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </androidx.appcompat.widget.SwitchCompat>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
